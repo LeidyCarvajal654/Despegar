@@ -4,6 +4,7 @@ package co.com.accenture.technoloshe.despegar.stepdefinitions;
 
 import org.openqa.selenium.WebDriver;
 
+import co.com.accenture.technoloshe.despegar.questions.MistakeData;
 import co.com.accenture.technoloshe.despegar.tasks.OpenTheBrowser;
 import co.com.accenture.technoloshe.despegar.tasks.SearchFlight;
 import co.com.accenture.technoloshe.despegar.userinterfaces.DespegarHome;
@@ -13,6 +14,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Consequence;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.thucydides.core.annotations.Managed;
 
@@ -45,8 +47,15 @@ public class FlightReservationStepDefinitions {
 
 	@Then("^she should see the data correctly on the screen$")
 	public void sheShouldSeeTheDataCorrectlyOnTheScreen() throws Exception {
-
+		actor.should(seeThat(MistakeData.data()));
     
 }
+
+
+	private Consequence seeThat(MistakeData data) {
+		
+		return null;
+	}
+
 
 }

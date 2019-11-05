@@ -22,5 +22,10 @@ public class MistakeData implements Question <String>{
 	}
 
 	}
+	
+	public static MistakeData data () {
+		return new MistakeData ();
+		
+	}
 
 }
